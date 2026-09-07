@@ -1,0 +1,42 @@
+h1 {
+  font-size: 75px;
+  padding: 10px;
+}
+body {
+  --bs-body-font-family: "Playfair Display", sans-serif;
+  background-color: white;
+  color: black;
+}
+div {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+.textbody1 {
+  text-align: center;
+  background: transparent;
+  padding: 58px;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  width: 800px;
+}
+.textbody2 {
+  text-align: center;
+  background-color: rgba(173, 217, 156, 0.7)!important;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  width: 650px;
+}
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+

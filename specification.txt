@@ -1,0 +1,21 @@
+HTML tags:
+link
+header
+ul
+li
+a
+h1
+div
+p
+button
+h2
+img
+
+CSS properties:
+font-size
+padding
+font-family
+background-color
+height
+
+I have used Bootstrap to incorporate the header and the image cards used in the other pages as for Javascript I have used it to implement dark mode in some of the pages.

@@ -1,0 +1,149 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <link href="styles.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display"
+    >
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card) => {
+          card.classList.toggle("text-bg-dark");
+          card.classList.toggle("mb-3");
+          if (element.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      }
+      window.onload = function () {
+        const theme = localStorage.getItem("theme");
+
+        if (theme === "dark") {
+          document.body.classList.add("dark-mode");
+
+          const cards = document.querySelectorAll(".card");
+          cards.forEach((card) => {
+            card.classList.add("text-bg-dark");
+            card.classList.add("mb-3");
+          });
+        }
+      };
+    </script>
+    <title>nature</title>
+  </head>
+  <body>
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./culture.html" class="nav-link">Culture</a>
+        </li>
+        <li class="nav-item">
+          <a href="./cuisine.html" class="nav-link">Cuisine</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">Nature</a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <button type="button" class="btn" onclick="myFunction()">
+        Dark Mode
+      </button>
+    </header>
+    <div class="card mb-3" style="max-width: 1050px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="https://i.postimg.cc/1XnTSkTC/IMG_4328.jpg"
+            class="img-fluid rounded-start"
+            alt="IMG_4328.jpg"
+          >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">Serene Beaches</h2>
+            <p class="card-text">
+              Kannur is home to Asia's longest drive-in beach, Muzhappilangad
+              beach and, in contrast, you can find more secluded and calm
+              beaches such as Kizhunna, Thottada beach. Spend a playful day in
+              the sun-heated sand and the graceful waves. Lastly, stop at
+              Payyambalam beach to enjoy a long walk overlooking the magnificent
+              sea.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 1050px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="https://i.postimg.cc/C5Bt03t6/IMG_8925.jpg"
+            class="img-fluid rounded-start"
+            alt="IMG_8925.jpg"
+          >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">Relaxing Nature</h2>
+            <p class="card-text">
+              This district has extremely geographically varying locations with
+              high altitude mountains to mangrove backwaters and numerous
+              beaches. An underrated place to just relax and take in the beauty
+              of nature is Kunnathurpadi, featuring the parts of the Sahyadri
+              Mountains. To experience a more tropical area of Kannur, visit
+              Kavvayi backwaters, where you can kayak your way through the
+              mangroves and also watch the sea meet the creek. There are also
+              boat rides to the islands where, if you are lucky, you can get a
+              beach all to yourself. During dry season, you can also walk
+              amongst the greenery as the water level depletes, or stay at the
+              Coconut Island camping site, which offers a good time with
+              informative guides at a reasonable charge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card mb-3" style="max-width: 1050px">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="https://i.postimg.cc/SR254B5r/hill.jpg"
+            class="img-fluid rounded-start"
+            alt="hill.jpg"
+          >
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">Breathtaking Views</h2>
+            <p class="card-text">
+              Palakkayam Thattu is lovely hill station located 3500ft above the
+              sea level with a panoramic view of greenery. Witness its scenic
+              beauty by trekking up to the peak. There are also many adventurous
+              activities, such as zip lining, rock climbing and other rope
+              activities. If hiking is not feasible, you can opt for a jumpy
+              jeep ride to the top. The best time to visit this site is during
+              the months of October-February and, if you wish, you can also camp
+              at the location.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <link href="styles.css" rel="stylesheet" >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Playfair+Display"
+    >
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card) => {
+          card.classList.toggle("text-bg-dark");
+          card.classList.toggle("mb-3");
+          if (element.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+        });
+      }
+      window.onload = function () {
+        const theme = localStorage.getItem("theme");
+
+        if (theme === "dark") {
+          document.body.classList.add("dark-mode");
+
+          const cards = document.querySelectorAll(".card");
+          cards.forEach((card) => {
+            card.classList.add("text-bg-dark");
+            card.classList.add("mb-3");
+          });
+        }
+      };
+    </script>
+    <title>cuisine</title>
+  </head>
+  <body>
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./culture.html" class="nav-link">Culture</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active" aria-current="page">Cuisine</a>
+        </li>
+        <li class="nav-item">
+          <a href="./nature.html" class="nav-link">Nature</a>
+        </li>
+        <li class="nav-item">
+          <a href="./contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <button type="button" class="btn" onclick="myFunction()">
+        Dark Mode
+      </button>
+    </header>
+    <h1 style="text-align: center; color: #316df4">Cuisine</h1>
+    <div class="container my-5">
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/SR254B5z/fish.jpg" class="card-img-top" alt="fish.jpeg">
+            <div class="card-body">
+              <h2 class="card-title">Fresh from the sea</h2>
+              <p class="card-text">
+                For a seafood enthusiast, Kannur offers one of the best
+                varieties of locally sourced seafood. To get a first-hand
+                experience of hustling for fresh fish, visit the Ayikkara
+                Fishing Harbour in Burnacherry.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/C532xvTr/pulissery_copy.png" class="card-img-top" alt="pulissery.png">
+            <div class="card-body">
+              <h2 class="card-title">Traditional Delicacies</h2>
+              <p class="card-text">
+                Explore the local cuisine. There are several dishes that make
+                use of the regionally available ingredients. Some of the most
+                loved delicacies are pathiris with chicken curry and kappa with
+                fish curry.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="https://i.postimg.cc/rsBHwhXn/sadya_copy.jpg" class="card-img-top" alt="sadya.jpeg">
+            <div class="card-body">
+              <h2 class="card-title">Sadya</h2>
+              <p class="card-text">
+                One of the most satisfying meals offered by this cuisine
+                includes several dishes served on a banana leaf, starting from
+                the simple banana chips to the pulissery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
